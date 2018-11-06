@@ -11,14 +11,12 @@ class Login extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
   handleSubmit (e) {
-    axios.post('http://localhost:3030/auth', {
-      name: this.name.value
-    }).then( out => {
-      const token = out.data.token
-      window.localStorage.setItem('token', token)
-      this.setState({
-        success: true
-      })
+    axios
+      .post('http://localhost:3030/auth', { name: this.name.value })
+      .then(out => {
+        const token = out.data.token
+        window.localStorage.setItem('token', token)
+        this.setState({ success: true })
     })
     e.preventDefault()
   }
