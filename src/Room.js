@@ -11,12 +11,17 @@ const Room = (props) => {
     </div>
     <div className="new-message-form w-form">
       <form className="form">
-          <textarea id="field" name="field" maxlength="5000" placeholder="Digite sua mensagem e pressione &lt;Enter&gt;" autofocus="true" className="msg w-input"></textarea>
+          <textarea 
+            id="field" 
+            name="field" 
+            maxlength="5000" 
+            placeholder="Digite sua mensagem e pressione &lt;Enter&gt;" 
+            autofocus="true" 
+            className="msg w-input"></textarea>
           <button type="button" className="send-audio w-button">Enviar<br/>Áudio</button>
       </form>
     </div>
   </div>
-
  )
 }
 

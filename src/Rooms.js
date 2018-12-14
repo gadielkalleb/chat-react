@@ -15,8 +15,6 @@ class Rooms extends Component {
       msgs: {}
     }
 
-
-
     // addRoom
     socket.on('newRoom', room => {
       this.setState({
@@ -80,7 +78,7 @@ class Rooms extends Component {
         </ul>
         <div className="add-room">+</div>
       </div>
-      <Route path='/rooms' component={SelectRoom}/>
+      <Route path='/rooms' exact component={SelectRoom}/>
       <Route path='/rooms/:room' component={Room}/>
     </div>
   )
